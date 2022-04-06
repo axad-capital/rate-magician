@@ -1,0 +1,188 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.orange {
+    color: orange;
+}
+
+.header-info {
+    width: 40%;
+    text-align: center;
+}
+
+.header-img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.header-info-title {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.header-img-container {
+    width: 40%;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    min-width: 290px;
+    padding: 40px;
+    max-width: 500px;
+    text-align: center;
+    background-color: rgb(255, 231, 199);
+    gap: 10px;
+    margin: 80px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0;
+}
+
+.form-container-title {
+    color: rgb(63, 69, 139);
+    font-weight: 600;
+}
+
+#magic-zip {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.submit-btn {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(255, 136, 0);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.submit-btn:hover {
+    background-color: rgb(168, 90, 0);
+}
+
+.we-work-container {
+    text-align: center;
+    width: 80%;
+    max-width: 1070px;
+    margin: 50px auto;
+    padding: 100px;
+}
+
+.we-work-title {
+    font-weight: 600;
+}
+
+.we-work-text {
+    color: rgb(110, 110, 110);
+}
+
+.get-insured {
+    display: flex;
+    background-color: rgb(63, 69, 139);
+    color: white;
+    padding: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.get-insured-title {
+    color: rgb(255, 136, 0);
+    width: 290px;
+}
+
+.get-insured-title > h2 {
+    font-size: 50px;
+}
+
+.steps-container {
+    padding: 50px;
+    margin-top: 80px;
+}
+
+.steps-container h1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.step-titles {
+    font-weight: 600;
+    color: rgb(63, 69, 139)
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.step-info {
+    width: 30%;
+    padding: 30px;
+    min-width: 250px;
+    background-color: rgb(255, 238, 224);
+    border-radius: 20px;
+}
+
+.line {
+    border-bottom: 1px solid black;
+    margin: 8px 0 8px 0;
+}
+
+.get-quote-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0 50px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(63, 69, 139);
+    padding: 30px;
+    color: white;
+}
+
+.get-quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header-container {
+        display: block;
+    }
+
+    .header-info {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .header-info-title {
+        font-size: 50px;
+    }
+
+    .header-img-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .we-work-container {
+        padding: 40px;
+    }
+
+    .get-insured-title > h2 {
+        font-size: 30px;
+    }
+
+    .get-insured-steps > p {
+        font-size: 12px;
+    }
+}

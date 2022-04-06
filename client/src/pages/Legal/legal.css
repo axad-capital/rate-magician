@@ -1,0 +1,18 @@
+.legal {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid black !important;
+    border-collapse: collapse;
+    padding: 5px;
+}
