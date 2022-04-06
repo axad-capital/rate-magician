@@ -19,6 +19,18 @@ const HomeComp = () => {
         window.location.href = '/thanks'
     }
 
+    function handleFormSubmit2() {
+        let zip = document.querySelector('.magic-zip2').value
+        console.log(zip);
+        if (document.querySelector('.magic-zip2').value === null || document.querySelector('.magic-zip2').value === '' || document.querySelector('.magic-zip2').value.length < 5) {
+            setBlankHandler('You Must Enter A Valid Zipcode!')
+            return
+        }
+        let autoZip = document.querySelector('.magic-zip2').value
+        localStorage.setItem('zipcodeMagic', autoZip)
+        window.location.href = '/thanks'
+    }
+
     return (
         <div>
             <div className='header-container'>
@@ -85,8 +97,8 @@ const HomeComp = () => {
                 </div>
                 <div className='get-quote-form'>
                     <label htmlFor="zip"><strong>Enter Your Zipcode</strong></label>
-                    <input type="text" name="zip" id="magic-zip" placeholder='Zipcode' />
-                    <button className='submit-btn' onClick={handleFormSubmit}>Submit</button>
+                    <input className='magic-zip2' type="text" name="zip" id="magic-zip" placeholder='Zipcode' />
+                    <button className='submit-btn' onClick={handleFormSubmit2}>Submit</button>
                     <p style={{color: 'red', textAlign: 'center'}} >{blankHandler}</p>
                 </div>
             </div>

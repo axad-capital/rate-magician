@@ -14,7 +14,7 @@ const Footer = () => {
                 <Link to='/partners'><h6>Partners</h6></Link>
             </div>
             <br />
-            <p>&copy; 2022 Rate Trooper</p>
+            <p>&copy; 2022 Rate Magician</p>
         </div>
     </div>
   )
