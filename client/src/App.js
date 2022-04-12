@@ -7,6 +7,7 @@ import Terms from './pages/Legal/Terms';
 import Disclaimer from './pages/Legal/Disclaimer';
 import Partners from './pages/Legal/Partners';
 import Thanks from './pages/Thanks/Thanks';
+import QuoteForm from './components/QuoteForm/QuoteForm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/disclaimer' element={<Disclaimer />} />
           <Route exact path='/partners' element={<Partners />} />
           <Route exact path='/thanks' element={<Thanks />} />
+          <Route exact path='/get-quote' element={<QuoteForm />} />
         </Routes>
       </Router>
     </div>
