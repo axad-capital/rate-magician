@@ -1,0 +1,44 @@
+.ad-title {
+    width: 80%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.ad {
+    display: flex;
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: rgb(247, 247, 247);
+    padding: 40px;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.listing-title {
+    font-weight: 600;
+    color: rgb(74, 132, 219);
+}
+
+.get-quote-btn {
+    padding: 15px;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 150px;
+    font-weight: 700;
+}
+
+.get-quote-btn:hover {
+    background-color: rgb(30, 145, 110);
+}
+
+@media screen and (max-width: 720px) {
+    .ad {
+        display: block;
+        text-align: center;
+    }
+}

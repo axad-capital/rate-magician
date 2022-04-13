@@ -4,6 +4,12 @@ import './quoteForm.css'
 
 const QuoteForm = () => {
 
+    clearLocal()
+
+    function clearLocal() {
+        localStorage.removeItem('adData')
+    }
+
     function quoteFormHandler() {
         fetch('https://api.ipify.org/?format=json')
             .then(result => result.json())
@@ -60,6 +66,8 @@ const QuoteForm = () => {
                     return res.json()
                 }).then(data => {
                     console.log(data)
+                    localStorage.setItem('adData', JSON.stringify(data))
+                    window.location.href = '/thank-you'
                 })
             })
     }
