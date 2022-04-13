@@ -18,7 +18,6 @@ const QuoteForm = () => {
                     id: uuidv4(),
                     firstName: document.getElementById('first').value,
                     lastName: document.getElementById('last').value,
-                    // birth: document.getElementById('bday').value,
                     email: document.getElementById('email').value,
                     homeOwner: document.getElementById('home-owner').value,
                     insured: document.getElementById('insured').value,
@@ -50,9 +49,6 @@ const QuoteForm = () => {
                     "requested_coverage": {
                         "vehicle_count": autoData.vehicles,
                     }
-                    // "individuals": {
-                    //     "birthdate": autoData.birthdate,
-                    // }
                 }
 
                 fetch("https://www.nextinsure.com/listingdisplay/listings", {
@@ -65,6 +61,9 @@ const QuoteForm = () => {
                 }).then(res => {
                     return res.json()
                 }).then(data => {
+                    if (data.listings === '') {
+                        window.location.href = '/thank-you'
+                    }
                     console.log(data)
                     localStorage.setItem('adData', JSON.stringify(data))
                     window.location.href = '/thank-you'
@@ -113,6 +112,7 @@ const QuoteForm = () => {
                     <br />
                     {/* <p style={{ color: 'red', textAlign: 'center' }} >{blankHandler}</p> */}
                 </div>
+                <p className='permission'>By clicking "Submit", I provide my express written consent via electronic signature authorizing Rate Magician and one or more Auto Insurance specialists, their agents and marketing partners to contact me and other related products and services to the number and email address I provided (including any wireless number). I further expressly consent to receive telemarketing emails, calls, text messages, pre-recorded messages, and artificial voice messages via an autodialed phone system, even if my telephone number is a mobile number that is currently listed on any state, federal or corporate “Do Not Call” list. I understand that my consent is not a condition of purchase of any goods or services and that standard message and data rates may apply.</p>
             </div>
         </div>
     )

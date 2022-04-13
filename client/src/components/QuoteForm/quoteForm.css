@@ -35,3 +35,8 @@
 .form-btn:hover {
     background-color: rgb(128, 56, 30);
 }
+
+.permission {
+    font-size: 12px;
+    text-align: center;
+}
