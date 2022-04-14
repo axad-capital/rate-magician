@@ -13,6 +13,9 @@ const ThanksQ = () => {
       <div className='no-ads'>
         <h1 className='ad-title'>Sorry! There are currently no offers for your area at this time, try a different zipcode or try again later.</h1>
         <button onClick={() => window.location.href = '/get-quote'} className='back-btn'>Back</button>
+        {/* Offer Conversion: RateTrooper - Affordable Auto Insurance Quotes - US */}
+        <iframe title='pixel' src="https://offers.axtracking.com/aff_l?offer_id=1295" scrolling="no" frameborder="0" width="1" height="1"></iframe>
+        {/* End Offer Conversion */}
       </div>
     )
   } else {
