@@ -34,7 +34,7 @@ const QuoteForm = () => {
                         "ip": data.ip,
                         "ua": navigator.userAgent,
                         "ni_var1": autoData.id,
-                        "ni_ref": "/auto-thank-you"
+                        "ni_ref": "https://www.ratemagician.com/thank-you"
                     },
                     "contact": {
                         "first_name": autoData.firstName,
