@@ -1,8 +1,27 @@
+.quote-main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.quote-main-img {
+    width: 50%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.quote-img {
+    width: 100%;
+    max-width: 600px;
+}
+
 .quote-form {
     width: 50%;
     max-width: 1000px;
     min-width: 300px;
-    margin: 80px auto;
+    margin: 0px auto;
 }
 
 #quote-heading, .quote-sub-heading  {
@@ -39,4 +58,20 @@
 .permission {
     font-size: 12px;
     text-align: center;
+}
+
+@media screen and (max-width: 1170px) {
+    .quote-main-container {
+        display: block;
+    }
+
+    .quote-main-img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .quote-img {
+        width: 80%;
+    }
+    
 }
