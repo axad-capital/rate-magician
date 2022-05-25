@@ -33,21 +33,39 @@ const HomeComp = () => {
 
     return (
         <div>
-            <div className='header-container'>
-                <div className='header-info'>
-                    <h1 className='header-info-title'>Save Up To <span className='orange'>30%</span> Get A Car Insurance Quote In Minutes!</h1>
-                </div>
-                <div className='header-img-container'>
-                    <img className='header-img' src={HeaderImg} alt="magic" />
-                </div>
-            </div>
-
+            <div className="header-flex-container">
             <div className='form-container'>
-                <h1 className='form-container-title'>Get A Free Quote Now</h1>
-                <label htmlFor="zip"><strong>Enter Your Zipcode</strong></label>
-                <input type="text" name="zip" id="magic-zip" placeholder='Zipcode' />
-                <button className='submit-btn' onClick={handleFormSubmit}>Submit</button>
-                <p style={{ color: 'red', textAlign: 'center' }} >{blankHandler}</p>
+                    <h1 className='form-container-title'>Get A Free Quote Now</h1>
+                    <label htmlFor="zip"><strong>Enter Your Zipcode</strong></label>
+                    <input type="text" name="zip" id="magic-zip" placeholder='Zipcode' />
+
+                    <label htmlFor="home-owner">Are you a Home Owner?</label>
+                    <select id='home-owner' className='form-input' name="home-owner">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <label htmlFor="insured">Are you currently insured?</label>
+                    <select id='insured' className='form-input' name="insured">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <label htmlFor="vehicles">How Many Vehicles Do You Own</label>
+                    <input id='vehicles' name='vehicles' className='form-input' type="number" placeholder='Vehicle Count' />
+                    <br />
+
+                    <button className='submit-btn' onClick={handleFormSubmit}>Submit</button>
+                    <p style={{ color: 'red', textAlign: 'center' }} >{blankHandler}</p>
+                </div>
+                <div className='header-container'>
+                    <div className='header-info'>
+                        <h1 className='header-info-title'>Save Up To <span className='orange'>30%</span> Get A Car Insurance Quote In Minutes!</h1>
+                    </div>
+                    <div className='header-img-container'>
+                        <img className='header-img' src={HeaderImg} alt="magic" />
+                    </div>
+                </div>
+
+                
             </div>
 
             <div className='we-work-container'>
