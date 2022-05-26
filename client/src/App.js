@@ -22,7 +22,7 @@ function App() {
           <Route exact path='/disclaimer' element={<Disclaimer />} />
           <Route exact path='/partners' element={<Partners />} />
           <Route exact path='/thanks' element={<Thanks />} />
-          {/* <Route exact path='/get-quote' element={<QuoteForm />} /> */}
+          <Route exact path='/get-quote' element={<QuoteForm />} />
           <Route exact path='/thank-you' element={<ThanksQ />} />
         </Routes>
       </Router>
