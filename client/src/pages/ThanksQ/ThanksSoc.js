@@ -12,6 +12,7 @@ const ThanksSoc = () => {
             <div className='no-ads'>
                 <h1 className='ad-title'>Sorry! There are currently no offers for your area at this time, try a different zipcode or try again later.</h1>
                 <button onClick={() => window.location.href = '/get-quote/soc'} className='back-btn'>Back</button>
+                <iframe title='pixel' src="https://www.a1jkghtrk.com/?nid=1715&oid=1324" scrolling="no" frameborder="0" width="1" height="1"></iframe>
             </div>
         )
     } else {
@@ -29,6 +30,7 @@ const ThanksSoc = () => {
                                     {/* <div>{ads.listingDescription.replace(/(<([^>]+)>)/gi, "").replace(/([A-Z])/g, ' $1').trim()}</div> */}
                                 </div>
                                 <button onClick={() => window.location.href = ads.url} className='get-quote-btn'>GET QUOTE</button>
+                                <iframe title='pixel' src="https://www.a1jkghtrk.com/?nid=1715&oid=1324" scrolling="no" frameborder="0" width="1" height="1"></iframe>
                             </div>
                         ))}
                     </div>
