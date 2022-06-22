@@ -3,14 +3,13 @@ import { v4 as uuidv4 } from 'uuid'
 import './quoteForm.css'
 import CarLogoQuote from './header-img.png'
 
-const QuoteForm = () => {
-
+const QuoteFormSocial = () => {
     const [error, setError] = useState('')
 
     clearLocal()
 
     function clearLocal() {
-        localStorage.removeItem('adData')
+        localStorage.removeItem('adDataSoc')
     }
 
     function getVarId() {
@@ -39,15 +38,16 @@ const QuoteForm = () => {
                     setError('All fields are required*')
                     return
                 } else {
+
                     let testData = {
                         "tracking": {
                             "content_type": "xml/json",
-                            "ni_ad_client": 663989,
+                            "ni_ad_client": 669683,
                             "ni_zc": autoData.zipcode,
                             "ip": data.ip,
                             "ua": navigator.userAgent,
                             "ni_var1": getVarId(),
-                            "ni_ref": "https://www.ratemagician.com/thank-you"
+                            "ni_ref": "https://www.ratemagician.com/thank-you/soc"
                         },
                         "contact": {
                             "zip": autoData.zipcode,
@@ -72,11 +72,11 @@ const QuoteForm = () => {
                         return res.json()
                     }).then(data => {
                         if (data.listings === '') {
-                            window.location.href = '/thank-you'
+                            window.location.href = '/thank-you/soc'
                         }
                         console.log(data)
-                        localStorage.setItem('adData', JSON.stringify(data))
-                        window.location.href = '/thank-you'
+                        localStorage.setItem('adDataSoc', JSON.stringify(data))
+                        window.location.href = '/thank-you/soc'
                     })
                 }
             })
@@ -97,13 +97,13 @@ const QuoteForm = () => {
 
                         <label htmlFor="home-owner">Are you a Home Owner?</label>
                         <select id='home-owner' className='form-input' name="home-owner">
-                            <option disabled selected value=''> -- Select An Option -- </option>
+                            <option disabled selected value> -- select an option -- </option>
                             <option value="1">Yes</option>
                             <option value="0">No</option>
                         </select>
                         <label htmlFor="insured">Are you currently insured?</label>
                         <select id='insured' className='form-input' name="insured">
-                            <option disabled selected value=''> -- Select An Option -- </option>
+                            <option disabled selected value> -- select an option -- </option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -122,4 +122,4 @@ const QuoteForm = () => {
     )
 }
 
-export default QuoteForm
+export default QuoteFormSocial

@@ -63,9 +63,7 @@ const HomeComp = () => {
                     <div className='header-img-container'>
                         <img className='header-img' src={HeaderImg} alt="magic" />
                     </div>
-                </div>
-
-                
+                </div>                
             </div>
 
             <div className='we-work-container'>
