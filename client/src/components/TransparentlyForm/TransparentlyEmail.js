@@ -14,7 +14,7 @@ const TransparentlyForm = () => {
     //   return
     // }
 
-    if (document.getElementById('state').value === '' || document.getElementById('vehicle-owner').value === '' || document.getElementById('insured').value === '' || document.getElementById('age').value === '') {
+    if (document.getElementById('state').value === '' || document.getElementById('home-owner').value === '' || document.getElementById('insured').value === '' || document.getElementById('age').value === '') {
       setBlankHandler('All fields required')
       return
     }
@@ -29,7 +29,7 @@ const TransparentlyForm = () => {
       "pubcampaignid": "6364",
       "vertical": "2",
       "age": document.getElementById('age').value,
-      "vehicleownershiptype": document.getElementById('vehicle-owner').value,
+      "homeowner": document.getElementById('home-owner').value,
       "currentlyinsured": document.getElementById('insured').value
     }
 
@@ -114,8 +114,8 @@ const TransparentlyForm = () => {
           <option value="WY">Wyoming</option>
         </select>
 
-        <label htmlFor="vehicle-owner"><strong>Do you own a vehicle?</strong></label>
-        <select id='vehicle-owner' className='form-input' name="vehicle-owner">
+        <label htmlFor="home-owner"><strong>Are you a homeowner?</strong></label>
+        <select id='home-owner' className='form-input' name="home-owner">
           <option disabled selected value=''> -- Select An Option -- </option>
           <option value="1">Yes</option>
           <option value="0">No</option>
