@@ -14,15 +14,23 @@ const TransparentlyForm = () => {
     //   return
     // }
 
-    if (document.getElementById('.state') === '') {
-      setBlankHandler('You must enter a state')
+    if (document.getElementById('state').value === '' || document.getElementById('vehicle-owner').value === '' || document.getElementById('insured').value === '' || document.getElementById('age').value === '') {
+      setBlankHandler('All fields required')
+      return
+    }
+
+    if (parseInt(document.getElementById('age').value) <= 0) {
+      setBlankHandler('Please enter a valid age')
       return
     }
 
     let userInput = {
-      "state": document.getElementById('.state'),
+      "state": document.getElementById('state').value,
       "pubcampaignid": "6364",
-      "vertical": "2"
+      "vertical": "2",
+      "age": document.getElementById('age').value,
+      "vehicleownershiptype": document.getElementById('vehicle-owner').value,
+      "currentlyinsured": document.getElementById('insured').value
     }
 
     fetch('https://api.transparent.ly/search/blue/green', {
@@ -49,8 +57,6 @@ const TransparentlyForm = () => {
     <div>
       <div className='form-container'>
         <h1 className='form-container-title'>Get A Free Quote Now</h1>
-        {/* <label htmlFor="zip"><strong>Enter Your Zipcode</strong></label>
-        <input type="text" name="zip" id="magic-zip" placeholder='Zipcode' /> */}
 
         <label htmlFor="state"><strong>Please choose the current state you're in</strong></label>
         <select id='state' className='form-input' name="state">
@@ -107,8 +113,23 @@ const TransparentlyForm = () => {
           <option value="WI">Wisconsin</option>
           <option value="WY">Wyoming</option>
         </select>
-        {/* <label htmlFor="vehicles">How Many Vehicles Do You Own</label>
-        <input id='vehicles' name='vehicles' className='form-input' type="number" placeholder='Vehicle Count' /> */}
+
+        <label htmlFor="vehicle-owner"><strong>Do you own a vehicle?</strong></label>
+        <select id='vehicle-owner' className='form-input' name="vehicle-owner">
+          <option disabled selected value=''> -- Select An Option -- </option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+
+        <label htmlFor="insured"><strong>Are you a insured?</strong></label>
+        <select id='insured' className='form-input' name="insured">
+          <option disabled selected value=''> -- Select An Option -- </option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+
+        <label htmlFor="age"><strong>Enter your age</strong></label>
+        <input id='age' className='form-input' type="number" placeholder='Enter your age' />
         <br />
 
         <button className='submit-btn' onClick={handleStateFormSubmit}>Submit</button>
